@@ -4,8 +4,7 @@ const Transaction = transactionModel;
 
 const findData = async (req, res) => {
     const date = new Date();
-    // const dateFormatYearMonth = date.getFullYear() + "-" + (date.getMonth() + 1);
-    const dateFormatYearMonth = '2021-11';
+    const dateFormatYearMonth = date.getFullYear() + "-" + (date.getMonth() + 1);
 
     try { 
         await getTotalTransactions(dateFormatYearMonth);
