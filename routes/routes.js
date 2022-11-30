@@ -1,12 +1,15 @@
 const express = require('express');
-const controller = require('../controllers/transactionController.js');
-const transactionRouter = express.Router();
+const transactionController = require('../controllers/transactionController.js');
+const dashboardController = require('../controllers/dashboardController.js');
+const easyFinanceRouter = express.Router();
 
-transactionRouter.get('', controller.findAll);
-transactionRouter.get('/findById', controller.findById);
-transactionRouter.get('/dates', controller.findAllDates);
-transactionRouter.post('/create', controller.create);
-transactionRouter.put('/edit', controller.edit);
-transactionRouter.delete('/remove', controller.remove);
+easyFinanceRouter.get('/transaction', transactionController.findAll);
+easyFinanceRouter.get('/transaction/findById', transactionController.findById);
+easyFinanceRouter.get('/transaction/dates', transactionController.findAllDates);
+easyFinanceRouter.post('/transaction/create', transactionController.create);
+easyFinanceRouter.put('/transaction/edit', transactionController.edit);
+easyFinanceRouter.delete('/transaction/remove', transactionController.remove);
 
-module.exports = transactionRouter;
+easyFinanceRouter.get('/dashboard', dashboardController.findData);
+
+module.exports = easyFinanceRouter;
