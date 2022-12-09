@@ -2,8 +2,7 @@ const express = require('express');
 const serverless = require("serverless-http");
 const cors = require('cors');
 const mongoose = require('mongoose');
-const routes = require('./routes/routes');
-const path = require('path');
+const routes = require('../routes/routes');
 const dotenv = require('dotenv');
 
 /**
