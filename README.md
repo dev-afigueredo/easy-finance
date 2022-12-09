@@ -1,1 +1,1 @@
-# easy-finance
+# easy-finance-api
