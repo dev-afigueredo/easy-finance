@@ -18,7 +18,7 @@ app.use(express.json());
 /**
  * Rota raiz
  */
-app.get('/', (_, response) => {
+app.get('/api/', (_, response) => {
   response.send({
     message:
       'Bem-vindo à API de lançamentos. Acesse /transaction e siga as orientações',
@@ -28,7 +28,7 @@ app.get('/', (_, response) => {
 /**
  * Rotas principais do app
  */
-app.use('/api', routes);
+app.use('/.netlify/functions/api', routes);
 
 /**
  * Conexão ao Banco de Dados
