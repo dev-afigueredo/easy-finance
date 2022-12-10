@@ -18,7 +18,7 @@ app.use(express.json());
 /**
  * Rota raiz
  */
-app.get('/api/', (_, response) => {
+app.get('/', (_, response) => {
   response.send({
     message:
       'Bem-vindo à API de lançamentos. Acesse /transaction e siga as orientações',
