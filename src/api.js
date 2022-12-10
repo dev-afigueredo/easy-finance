@@ -28,7 +28,7 @@ app.get('/', (_, response) => {
 /**
  * Rotas principais do app
  */
-app.use('/.netlify/functions/api', routes);
+app.use('/api', routes);
 
 /**
  * Conexão ao Banco de Dados
