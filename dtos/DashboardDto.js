@@ -1,8 +1,13 @@
-const dashboardDto = {
-    totalTransactions: 0,
-    totalExpenses: 0,
-    totalRevenues: 0,
-    balance: 0,
+const TotalizersGeneric = require("../generics/TotalizersGeneric");
+
+class DashboardDto {
+    totalizersByMonth;
+    totalizersByDay;
+
+    constructor() {
+        this.totalizersByMonth = TotalizersGeneric;
+        this.totalizersByDay = new Array();
+    }
 }
 
-module.exports = dashboardDto;
+module.exports = new DashboardDto;
